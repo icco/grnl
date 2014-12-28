@@ -1,6 +1,6 @@
 # grnl
 
-*grnl* is a simple clone of [jrnl](http://jrnl.sh).
+`grnl` is a simple clone of [jrnl](http://jrnl.sh).
 
 ## Why keep a journal?
 
@@ -17,7 +17,7 @@ and hit return. `yesterday:` will be interpreted as a timestamp. Everything unti
     2012-03-29 09:00 Called in sick.
     Used the time to clean the house and spent 4h on writing my book.
 
-If you just call `grnl`, you will be prompted to compose your entry - but you can also configure _grnl_ to use your external editor.
+If you just call `grnl`, you will be prompted to compose your entry - but you can also configure `grnl` to use your external editor.
 
 ## Installation
 
