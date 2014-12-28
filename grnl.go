@@ -4,13 +4,17 @@ import (
 	"flag"
 	"fmt"
 	"strings"
+	"time"
 )
 
 type Entry struct {
+	date  time.Time
+	title string
+	body  string
 }
 
-func parse(text string) ([]*Entry, error) {
-	return nil, nil
+func parse(text string) (error, []*Entry) {
+	return nil, []*Entry{}
 }
 
 func main() {
