@@ -24,22 +24,14 @@ func TestParse(t *testing.T) {
 			t.Errorf("Got an error parsing '%s': %+v", tst.str, err)
 		}
 
-		if !EntryEqual(tst.entries, entries) {
-			t.Errorf("Got %+v while parsing '%s', expected %+v.", entries, tst.str, tst.entries)
+		if len(tst.entries) != len(entries) {
+			t.Errorf("Got %d entries, expected %d, while parsing '%s'.", len(entries), len(tst.entries), tst.str)
+		} else {
+			for i, v := range tst.entries {
+				if v != entries[i] {
+					t.Errorf("%+v != %+v.", entries[i], tst.entries[i])
+				}
+			}
 		}
 	}
-}
-
-func EntryEqual(a, b []*Entry) bool {
-	if len(a) != len(b) {
-		return false
-	}
-
-	for i, v := range a {
-		if v != b[i] {
-			return false
-		}
-	}
-
-	return true
 }
