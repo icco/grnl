@@ -3,7 +3,15 @@ package main
 import (
 	"flag"
 	"fmt"
+	"strings"
 )
+
+type Entry struct {
+}
+
+func parse(text string) ([]*Entry, error) {
+	return nil, nil
+}
 
 func main() {
 	// Basic flag declarations are available for string,
@@ -38,5 +46,7 @@ func main() {
 	fmt.Println("numb:", *numbPtr)
 	fmt.Println("fork:", *boolPtr)
 	fmt.Println("svar:", svar)
-	fmt.Println("tail:", flag.Args())
+	fmt.Println("tail:", len(flag.Args()))
+
+	parse(strings.Join(flag.Args(), " "))
 }
